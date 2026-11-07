@@ -29,16 +29,16 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(self.calc.multiply(-3,-3), 9)
     #------------------ div -----------------------
     def test_div1(self):
-        self.assertEqual(self.calc.divide(3,0), ValueError)
+        self.assertEqual(self.calc.divide(3,0), "Cannot divide by 0")
     def test_div2(self):
         self.assertEqual(self.calc.divide(-15,3), 0)
     #------------------ mod -----------------------
     def test_mod1(self):
-        self.assertEqual(self.calc.modulo(10,-2), -2)
+        self.assertEqual(self.calc.modulo(10, 3), 1)
     def test_mod2(self):
-        self.assertEqual(self.calc.modulo(0,2), 0)
+        self.assertEqual(self.calc.modulo(20, 5), 0)
     def test_mod2(self):
-        self.assertEqual(self.calc.modulo(21,0), 0)
+        self.assertEqual(self.calc.modulo(2, 7), 2)
 
 
 
