@@ -19,16 +19,18 @@ class Calculator:
 
     def divide(self, a, b):
         result = 0
-        # if b == 0 :
-        #     raise ValueError
+        if b == 0 :
+            return "Cannot divide by 0"
         while a > b:
             a = self.subtract(a, b)
             result += 1
         return result
     
     def modulo(self, a, b):
-        while a <= b:
-            a = a-b
+        if b == 0:
+            return 0
+        while a >= b:
+            a = a - b
         return a
 
 # Example usage:
@@ -38,5 +40,5 @@ if __name__ == "__main__":
     print("Example: addition: ", calc.add(1, 2))
     print("Example: subtraction: ", calc.subtract(4, 2))
     print("Example: multiplication: ", calc.multiply(2, -4))
-    print("Example: division: ", calc.divide(10, 0))
+    print("Example: division: ", calc.divide(-15, 3))
     print("Example: modulo: ", calc.modulo(10, 3))
